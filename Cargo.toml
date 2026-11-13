@@ -1,0 +1,35 @@
+[package]
+name = "tcpfp"
+version = "0.1.0"
+edition = "2024"
+description = "Records the TCP/IP fingerprint and IP reputation of each incoming connection"
+license = "MIT"
+
+[dependencies]
+addr = "0.15.6"
+anyhow = "1.0.97"
+axum = "0.8.3"
+base64 = "0.22.1"
+clickhouse = { version = "0.14.2", features = ["inserter", "uuid"] }
+elasticsearch = "8.17.0-alpha.1"
+hyper = "1.6.0"
+hyper-util = { version = "0.1.11", features = [
+    "tokio",
+    "server-auto",
+    "http1",
+] }
+lazy_static = "1.5.0"
+lru = "0.13.0"
+moka = { version = "0.12.10", features = ["future"] }
+pnet = "0.35.0"
+prometheus = "0.14.0"
+reqwest = { version = "0.12.15", features = ["json"] }
+serde = { version = "1.0.221", features = ["derive"] }
+serde_json = "1.0.149"
+state = "0.6.0"
+tokio = { version = "1.44.2", features = ["full"] }
+tokio-rustls = "0.26.2"
+tower = "0.5.2"
+tower-http = { version = "0.6.6", features = ["cors"] }
+uuid = { version = "1.20.0", features = ["serde", "v4"] }
+
